@@ -1,0 +1,33 @@
+{
+  "name": "mapathe/appdaf",
+  "description": "projet pour gerer les donnes des cartes d'identites",
+  "autoload": {
+    "psr-4": {
+      "Mapathe\\Appdaf\\": "src/",
+      "App\\Core\\Abstract\\": "app/core/abstract/",
+      "App\\Core\\": "app/core/",
+      "App\\Controller\\": "src/controller/",
+      "App\\Entity\\": "src/entity/",
+      "App\\Repository\\": "src/repository/",
+      "App\\Service\\": "src/service/",
+      "App\\Enum\\": "src/enum/"
+    }
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "mapathe ndiaye"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.6",
+    "twilio/sdk": "^8.6",
+    "symfony/yaml": "^7.3",
+    "cloudinary/cloudinary_php": "^2.0"
+  },
+  "scripts": {
+    "database:migrate": "php migrations/migration.php --reset",
+    "seeder:migrate": "php seeders/seeder.php --reset",
+    "start": "php -S localhost:8081 -t public"
+  }
+}

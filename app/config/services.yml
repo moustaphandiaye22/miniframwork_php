@@ -1,0 +1,44 @@
+# Configuration des services AppDAF
+services:
+  # Repositories
+  repositories:
+    CitoyenRepository:
+      class: App\Repository\CitoyenRepository
+      singleton: true
+    
+    LoggerRepository:
+      class: App\Repository\LoggerRepository
+      singleton: true
+  
+  # Services
+  services:
+    CitoyenService:
+      class: App\Service\CitoyenService
+      dependencies:
+        - CitoyenRepository
+        - LoggerService
+      singleton: true
+    
+    LoggerService:
+      class: App\Service\LoggerService
+      dependencies:
+        - LoggerRepository
+      singleton: true
+  
+  # Controllers
+  controllers:
+    CitoyenController:
+      class: App\Controller\CitoyenController
+      dependencies:
+        - CitoyenService
+      singleton: true
+
+database:
+  host: ${DB_HOST:localhost}
+  port: ${DB_PORT:5433}
+  name: ${DB_NAME:pgdbDaf}
+  user: ${DB_USER:pguserDaf}
+  password: ${DB_PASSWORD:pgpassword}
+
+api:
+  base_url: ${API_BASE_URL:http://localhost:8081}
