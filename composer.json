@@ -29,5 +29,9 @@
     "database:migrate": "php migrations/migration.php --reset",
     "seeder:migrate": "php seeders/seeder.php --reset",
     "start": "php -S localhost:8081 -t public"
-  }
+  },
+  "type": "project",
+  "minimum-stability": "stable",
+  "prefer-stable": true
+
 }
