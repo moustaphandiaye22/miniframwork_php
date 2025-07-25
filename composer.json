@@ -1,9 +1,9 @@
 {
-  "name": "mapathe/appdaf",
+  "name": "moustapha/appdaf",
   "description": "projet pour gerer les donnes des cartes d'identites",
   "autoload": {
     "psr-4": {
-      "Mapathe\\Appdaf\\": "src/",
+      "moustapha\\Appdaf\\": "src/",
       "App\\Core\\Abstract\\": "app/core/abstract/",
       "App\\Core\\": "app/core/",
       "App\\Controller\\": "src/controller/",
@@ -16,7 +16,7 @@
   "license": "proprietary",
   "authors": [
     {
-      "name": "mapathe ndiaye"
+      "name": "moustapha ndiaye"
     }
   ],
   "require": {
